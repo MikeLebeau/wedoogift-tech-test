@@ -1,0 +1,44 @@
+.amount-input {
+  display: flex;
+  flex-direction: column;
+
+  &-label {
+    margin-bottom: 20px;
+  }
+
+  &-input {
+    height: 40px;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  &-button {
+    height: 60px;
+    margin-bottom: 20px;
+
+    background-color: #133576;
+    color: white;
+
+    font-size: 28px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+    transition-duration: 200ms;
+
+    &:hover {
+      background-color: #14429B;
+    }
+  }
+
+
+  .result-cards {
+    margin-top: 26px;
+
+    app-amount-card:not(:first-child) {
+      margin: 5px;
+    }
+  }
+}
