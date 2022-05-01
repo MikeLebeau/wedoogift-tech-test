@@ -1,0 +1,9 @@
+<div class="amount-card">
+  <span>Pour {{ amount }} €, Votre montant est composé des cartes suivantes :</span>
+  <div class="divider"></div>
+  <ul>
+    <li *ngFor="let card of cards">
+      {{ card }} €
+    </li>
+  </ul>
+</div>

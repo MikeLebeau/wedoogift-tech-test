@@ -1,0 +1,10 @@
+<div class="amount-input">
+
+  <label class="amount-input-label" for="desiredAmount">Montant désiré:</label>
+  <input class="amount-input-input" id="desiredAmount" name="desiredAmount" type="number" [formControl]="desiredAmountControl"/>
+  <button class="amount-input-button" type="submit" (click)="getCardCombination()">{{ 'valider' | uppercase}}</button>
+
+  <div class="result-cards">
+    <app-amount-card *ngFor="let knownCombination of (alreadyAskedCombination | async).reverse()" [amount]="knownCombination.equal.value" [cards]="knownCombination.equal.cards"></app-amount-card>
+  </div>
+</div>

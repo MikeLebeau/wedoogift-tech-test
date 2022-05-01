@@ -1,0 +1,17 @@
+<div class="choice">
+  <header class="choice-header">
+    Oups... Le montant désiré n'est pas disponible !
+    <br>
+    Votre montant désiré: {{ data.desiredAmount }} €
+  </header>
+  <div class="choice-content">
+    <span>Voici le(s) montant(s) disponible(s) le(s) plus proche de votre montant de départ:</span>
+    <br>
+    <button *ngIf="data.floorAmount" class="choice-content-button" (click)="getNewCombination(data.floorAmount)">
+      {{ data.floorAmount }} €
+    </button>
+    <button *ngIf="data.ceilAmount" class="choice-content-button" (click)="getNewCombination(data.ceilAmount)">
+      {{ data.ceilAmount }} €
+    </button>
+  </div>
+</div>

@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'webapp'`, () => {
+  it(`should have as title 'Wedoogift 💙'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('webapp');
+    expect(app.title).toEqual('Wedoogift 💙');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('webapp app is running!');
+    expect(compiled.querySelector('.main-header > span').textContent).toContain('Wedoogift 💙 app is running!');
   });
 });
